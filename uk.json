@@ -35,5 +35,8 @@
   "contact.title": "Зв’яжіться з нами",
   "contact.text": "Маєте питання, пропозиції або хочете співпрацювати? Не соромтеся — нам подобається спілкуватися!",
   "contact.cta": "Надіслати повідомлення",
-  "contact.socials": "Слідкуйте за нами в соціальних мережах:"
+  "contact.socials": "Слідкуйте за нами в соціальних мережах:",
+  "hero.img": "assets/images/uk/hero.jpg",
+  "product1.img": "assets/images/uk/product1.jpg",
+  "look1.img": "assets/images/uk/look1.jpg"
 }
