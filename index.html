@@ -10,18 +10,74 @@
 <header>
   <h1 id="hero_title"></h1>
   <p id="hero_subtitle"></p>
+
+  <nav>
+    <a href="#" id="nav_home"></a>
+    <a href="#" id="nav_about"></a>
+    <a href="#" id="nav_contact"></a>
+  </nav>
+
+  <div>
+    <button onclick="loadLanguage('en')">EN</button>
+    <button onclick="loadLanguage('uk')">UA</button>
+  </div>
 </header>
 
-<nav>
-  <button onclick="loadLanguage('en')">EN</button>
-  <button onclick="loadLanguage('uk')">UA</button>
-</nav>
-
 <main>
+
+<section>
   <h2 id="about_title"></h2>
   <p id="about_text"></p>
+</section>
 
+<section>
+  <h2 id="services_title"></h2>
+
+  <div class="card">
+    <h3 id="service1_title"></h3>
+    <p id="service1_desc"></p>
+    <button id="service1_btn"></button>
+  </div>
+
+  <div class="card">
+    <h3 id="service2_title"></h3>
+    <p id="service2_desc"></p>
+    <button id="service2_btn"></button>
+  </div>
+</section>
+
+<section>
+  <h2 id="filter_title"></h2>
+  <label id="filter_label"></label>
+  <select>
+    <option id="filter_option1"></option>
+    <option id="filter_option2"></option>
+  </select>
+</section>
+
+<section>
+  <h2 id="form_title"></h2>
+
+  <form>
+    <label id="form_name_label"></label><br>
+    <input type="text" placeholder="" id="form_name_placeholder"><br>
+
+    <label id="form_email_label"></label><br>
+    <input type="email" placeholder="" id="form_email_placeholder"><br>
+
+    <label id="form_message_label"></label><br>
+    <textarea placeholder="" id="form_message_placeholder"></textarea><br>
+
+    <button type="submit" id="form_submit"></button>
+  </form>
+</section>
+
+<section>
+  <h2 id="cta_title"></h2>
+  <p id="cta_text"></p>
   <button id="cta_button"></button>
+</section>
+
 </main>
 
 <footer>
