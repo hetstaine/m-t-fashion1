@@ -35,5 +35,8 @@
   "contact.title": "Get in Touch",
   "contact.text": "Have questions, suggestions, or want to collaborate? Don’t be a stranger — we love hearing from you!",
   "contact.cta": "Send Message",
-  "contact.socials": "Follow us on social media:"
+  "contact.socials": "Follow us on social media:",
+  "hero.img": "assets/images/en/hero.jpg",
+  "product1.img": "assets/images/en/product1.jpg",
+  "look1.img": "assets/images/en/look1.jpg"
 }
