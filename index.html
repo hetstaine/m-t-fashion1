@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Localization Demo Full</title>
+  <title>Localization Demo Modern</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="hero">
-  <img id="hero_image" src="images/hero.jpg" alt="" id="hero_alt">
-  <div class="hero-text">
+<header class="hero" id="hero_section">
+  <div class="hero-overlay">
     <h1 id="hero_title"></h1>
     <p id="hero_subtitle"></p>
+    <button id="cta_button"></button>
     <div class="lang-switch">
       <button onclick="loadLanguage('en')">EN</button>
       <button onclick="loadLanguage('uk')">UA</button>
@@ -19,12 +20,12 @@
   </div>
 </header>
 
-<nav>
-  <a href="#" id="nav_home"></a>
-  <a href="#" id="nav_about"></a>
-  <a href="#" id="nav_services"></a>
-  <a href="#" id="nav_testimonials"></a>
-  <a href="#" id="nav_contact"></a>
+<nav class="navbar">
+  <a href="#hero_section" id="nav_home"></a>
+  <a href="#about_section" id="nav_about"></a>
+  <a href="#services_section" id="nav_services"></a>
+  <a href="#testimonials_section" id="nav_testimonials"></a>
+  <a href="#contact_section" id="nav_contact"></a>
 </nav>
 
 <main>
@@ -37,13 +38,13 @@
   <h2 id="services_title"></h2>
   <div class="card-container">
     <div class="card">
-      <img src="images/service1.jpg" alt="" id="service1_alt">
+      <img src="images/service1.jpg" alt="" id="service1_alt" title="">
       <h3 id="service1_title"></h3>
       <p id="service1_desc"></p>
       <button id="service1_btn"></button>
     </div>
     <div class="card">
-      <img src="images/service2.jpg" alt="" id="service2_alt">
+      <img src="images/service2.jpg" alt="" id="service2_alt" title="">
       <h3 id="service2_title"></h3>
       <p id="service2_desc"></p>
       <button id="service2_btn"></button>
@@ -55,12 +56,12 @@
   <h2 id="testimonials_title"></h2>
   <div class="testimonial-container">
     <div class="testimonial">
-      <img src="images/testimonial1.jpg" alt="" id="testimonial1_alt">
+      <img src="images/testimonial1.jpg" alt="" id="testimonial1_alt" title="">
       <p id="testimonial1_text"></p>
       <p class="author" id="testimonial1_author"></p>
     </div>
     <div class="testimonial">
-      <img src="images/testimonial2.jpg" alt="" id="testimonial2_alt">
+      <img src="images/testimonial2.jpg" alt="" id="testimonial2_alt" title="">
       <p id="testimonial2_text"></p>
       <p class="author" id="testimonial2_author"></p>
     </div>
@@ -70,23 +71,20 @@
 <section id="gallery_section">
   <h2 id="gallery_title"></h2>
   <div class="gallery">
-    <img src="images/gallery1.jpg" alt="" id="gallery1_alt">
-    <img src="images/gallery2.jpg" alt="" id="gallery2_alt">
+    <img src="images/gallery1.jpg" alt="" id="gallery1_alt" title="">
+    <img src="images/gallery2.jpg" alt="" id="gallery2_alt" title="">
   </div>
 </section>
 
 <section id="contact_section">
   <h2 id="form_title"></h2>
   <form>
-    <label id="form_name_label"></label><br>
-    <input type="text" placeholder="" id="form_name_placeholder"><br>
-
-    <label id="form_email_label"></label><br>
-    <input type="email" placeholder="" id="form_email_placeholder"><br>
-
-    <label id="form_message_label"></label><br>
-    <textarea placeholder="" id="form_message_placeholder"></textarea><br>
-
+    <label id="form_name_label"></label>
+    <input type="text" id="form_name_placeholder" placeholder=""><br>
+    <label id="form_email_label"></label>
+    <input type="email" id="form_email_placeholder" placeholder=""><br>
+    <label id="form_message_label"></label>
+    <textarea id="form_message_placeholder" placeholder=""></textarea><br>
     <button type="submit" id="form_submit"></button>
   </form>
 </section>
@@ -94,7 +92,7 @@
 <section id="newsletter_section">
   <h2 id="newsletter_title"></h2>
   <p id="newsletter_text"></p>
-  <input type="email" placeholder="" id="newsletter_placeholder">
+  <input type="email" id="newsletter_placeholder" placeholder="">
   <button id="newsletter_btn"></button>
 </section>
 
