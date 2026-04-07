@@ -24,6 +24,8 @@ async function localizePage(lang) {
       } else {
         el.innerText = translations[key];
       }
+    } else {
+      console.warn(`Missing translation for: ${key}`);
     }
   });
 
@@ -40,18 +42,56 @@ async function localizePage(lang) {
   });
 }
 
+// Fun confetti function
+function spawnConfetti() {
+  const confettiCount = 20;
+  for (let i = 0; i < confettiCount; i++) {
+    const confetti = document.createElement('div');
+    confetti.innerText = ['🎉', '👗', '🕶️', '💃', '👠'][Math.floor(Math.random()*5)];
+    confetti.style.position = 'fixed';
+    confetti.style.top = Math.random() * window.innerHeight + 'px';
+    confetti.style.left = Math.random() * window.innerWidth + 'px';
+    confetti.style.fontSize = 24 + Math.random()*16 + 'px';
+    confetti.style.pointerEvents = 'none';
+    confetti.style.zIndex = 9999;
+    document.body.appendChild(confetti);
+    setTimeout(() => confetti.remove(), 2000 + Math.random()*2000);
+  }
+}
+
 // Run after DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
+  // Initial localization
   localizePage(currentLang);
 
   // Language switcher
   const langSwitcher = document.getElementById('langSwitcher');
   if (langSwitcher) {
-    langSwitcher.value = currentLang; // set select to current language
+    langSwitcher.value = currentLang;
     langSwitcher.addEventListener('change', e => {
       currentLang = e.target.value;
       localStorage.setItem('lang', currentLang);
       localizePage(currentLang);
     });
   }
+
+  // --- Easter Egg: Change all images + confetti ---
+  document.addEventListener('keydown', (e) => {
+    // Ctrl + Shift + I → trigger
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
+      const newImg = 'assets/images/fun/party.gif'; // your fun image
+      document.querySelectorAll('img').forEach(img => {
+        if (!img.dataset.originalSrc) img.dataset.originalSrc = img.src; // save original
+        img.src = newImg;
+      });
+      spawnConfetti(); // fun effect
+    }
+
+    // Ctrl + Shift + R → restore original images
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'r') {
+      document.querySelectorAll('img').forEach(img => {
+        if (img.dataset.originalSrc) img.src = img.dataset.originalSrc;
+      });
+    }
+  });
 });
