@@ -67,13 +67,15 @@ body {
 
 .hero {
   position: relative;
-  text-align: center;
+  width: 100vw;           /* full viewport width */
+  overflow: hidden;       /* prevent horizontal scroll */
 }
 
 .hero img {
-  width: 100%;
+  width: 100vw;
   height: 70vh;
   object-fit: cover;
+  display: block; 
 }
 
 .hero-text {
@@ -82,6 +84,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  text-align: center;
+  width: 90%;           /* optional, prevents text from spilling */
+  max-width: 800px;
 }
 
 .cta-btn {
