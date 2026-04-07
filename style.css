@@ -294,3 +294,12 @@ body {
     flex-direction: column;
   }
 }
+
+/* ===== LOOKBOOK IMAGES ===== */
+.lookbook .product-card img {
+  width: 100%;
+  height: auto;        /* preserve natural aspect ratio */
+  object-fit: contain; /* ensure the whole image is visible */
+  border-radius: 10px;
+  display: block;
+}
