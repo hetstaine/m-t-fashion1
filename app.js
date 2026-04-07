@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Ctrl + Shift + R → restore original images
-    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'r') {
+    if (e.shiftKey && !e.ctrlKey && !e.altKey && e.key.toLowerCase() === 'r') {
       document.querySelectorAll('img').forEach(img => {
         if (img.dataset.originalSrc) img.src = img.dataset.originalSrc;
       });
