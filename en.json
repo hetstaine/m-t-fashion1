@@ -1,5 +1,5 @@
 {
-  "title": "Chick Happens - Fashion Website",
+  "title": "Chic Happens - Fashion Website",
   "nav.home": "Home",
   "nav.collections": "Collections",
   "nav.about": "About Us",
@@ -31,7 +31,7 @@
   "lookbook.title": "Our Lookbook",
   "lookbook.caption1": "Urban Chic Look",
   "lookbook.caption2": "Sunset Vibes",
-  "lookbook.caption3": "Weekend Warrior",
+  "lookbook.caption3": "Weekend Walks",
   "contact.title": "Get in Touch",
   "contact.text": "Have questions, suggestions, or want to collaborate? Don’t be a stranger — we love hearing from you!",
   "contact.cta": "Send Message",
@@ -42,5 +42,8 @@
   "look3.img": "assets/images/en/look3.jpg",
   "product1.img": "assets/images/en/product1.jpg",
   "product2.img": "assets/images/en/product2.jpg",
-  "product3.img": "assets/images/en/product3.jpg"
+  "product3.img": "assets/images/en/product3.jpg",
+  "lookbook.desc1": "Streets are your runway — walk tall and turn heads, because fortune favors the stylish!",
+  "lookbook.desc2": "Catch the golden hour in style — perfect for when you want to make every sunset a showstopper.",
+  "lookbook.desc3": "Conquer the weekend in comfort and flair — because you can’t spell “relax” without a little style!"
 }
